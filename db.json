@@ -2,21 +2,16 @@
   "seller": [
     {
       "name": "Shiva",
-      "password": "twst@123",
+      "password": "test@123",
       "email": "test@123",
       "id": 1
     },
+    
     {
-      "name": "",
-      "password": "",
-      "email": "",
+      "name": "Akash Navghane",
+      "email": "akashnavghane9@gmail.com",
+      "password": "Akash@123",
       "id": 2
-    },
-    {
-      "name": "",
-      "password": "",
-      "email": "",
-      "id": 3
     }
   ]
 }
