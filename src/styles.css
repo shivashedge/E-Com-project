@@ -1,32 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap");
 
 /* reusable and mandotary code */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Work Sans', sans-serif;
-    
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
 }
+
 html {
-    font-size: 62.5%;
-    /* FOR 1 rem = 10px */
+  font-size: 62.5%;
+  /* FOR 1 rem = 10px */
 }
+
 :root {
-    --heading: rgb(0 10 45);
-    --para: #777;
-    --para-tint: #e4e4e4;
-    --white: #fff;
-    --black: #212529;
-    --helper: #8490ff;
-    --helper-tint: #f3f4ff;
-    --bg: rgb(249 249 255);
-    /* --bg: #c8d6e5; */
-    --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
-    --gradientSupport: -webkit-linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
-    --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
-    --shadowsupport: 0 2rem 2rem 0 rgb(132 144 255 / 30%);
+  --heading: rgb(0 10 45);
+  --para: #777;
+  --para-tint: #e4e4e4;
+  --white: #fff;
+  --black: #212529;
+  --helper: #8490ff;
+  --helper-tint: #f3f4ff;
+  --bg: rgb(249 249 255);
+  /* --bg: #c8d6e5; */
+  --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+  --gradientSupport: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
+  --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+  --shadowsupport: 0 2rem 2rem 0 rgb(132 144 255 / 30%);
 }
+
 /* .container{
     margin-left: 5%;
     margin-right: 5%;
@@ -36,73 +42,75 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
+
 h1 {
-    color: var(--heading);
-    font-size: 6rem;
-    font-weight: 600;
+  color: var(--heading);
+  font-size: 6rem;
+  font-weight: 600;
 }
 
 h3 {
-    font-size: 2.8rem;
-    font-weight: 400;
+  font-size: 2.8rem;
+  font-weight: 400;
 }
 
 p {
-    color: var(--para);
-    line-height: 1.6;
-    font-size: 1.7rem;
+  color: var(--para);
+  line-height: 1.6;
+  font-size: 1.7rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .btn {
-    background: var(--gradientSupport);
-    padding: 1rem 3rem;
-    color: var(--shadow);
-    /* display: inline-block; */
-    text-transform: uppercase;
-    /* font-size: 1.8rem; */
-    cursor: pointer;
-    transition: all 0.3s ease;
-    /*if transition of css3 not suportted webkit is for chrome opera safari browsers*/
-    -webkit-transition: all 0.3s ease;
-    border: none;
+  background: var(--gradientSupport);
+  padding: 1rem 3rem;
+  color: var(--heading);
+  /* display: inline-block; */
+  text-transform: uppercase;
+  /* font-size: 1.8rem; */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /*if transition of css3 not suportted webkit is for chrome opera safari browsers*/
+  -webkit-transition: all 0.3s ease;
+  border: none;
 }
 
 .btn:hover,
 .btn:active {
-    box-shadow: var(--shadowsupport);
-
+  box-shadow: var(--shadowsupport);
 }
 
 .common-form {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 50%;
-    padding-bottom: 5rem;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 50%;
+  padding: 5rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-
-input.form-input {
-    height: 3.5rem;
-    padding-left: 1.5rem;
-    color: var(--helper);
-    border: 1px solid var(--helper);
-    margin-bottom: 2rem;
+.form-input {
+  height: 3.5rem;
+  padding-left: 1.5rem;
+  color: var(--helper);
+  border: 1px solid var(--helper);
+  margin-bottom: 3rem;
 }
 
 .error-p {
-    color: red;
+  color: red;
+}
+
+.success_p {
+  color: green;
 }

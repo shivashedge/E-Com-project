@@ -1,20 +1,17 @@
 .sign-up,
 .login {
-    text-align: center;
-    /* background-color: #c8d6e5 ; */
+  text-align: center;
+  color: var(--helper);
 }
 
-.sign-up h3,
-.login h3{
-    color: var(--helper);
-    padding: 5rem 0;
+h3 {
+  padding-top: 4rem;
 }
 
-.auth-toggle-link{
-    margin-top: 3rem ;
-    font-size: 1.5rem;
-    color: var(--helper);
-    text-align: center;
-    cursor: pointer;
+.auth-toggle-link {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: var(--helper);
+  text-align: center;
+  cursor: pointer;
 }
-

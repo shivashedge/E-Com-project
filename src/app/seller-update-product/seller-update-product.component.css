@@ -1,0 +1,9 @@
+.update-product {
+  text-align: center;
+  color: var(--helper);
+}
+
+.update-product h3 {
+  padding-top: 4rem;
+}
+

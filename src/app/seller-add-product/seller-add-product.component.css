@@ -1,0 +1,8 @@
+.add-product {
+  text-align: center;
+  color: var(--helper);
+}
+
+.add-product h3 {
+  padding-top: 4rem;
+}

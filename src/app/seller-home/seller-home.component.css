@@ -1,0 +1,30 @@
+table {
+  text-align: center;
+  color: var(--helper);
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: large;
+}
+table td,
+table th {
+  border: 1px solid var(--helper);
+  padding: 1rem;
+  min-width: 16rem;
+}
+img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.product-list{
+  text-align: center;
+  color: var(--helper);
+}
+
+h3 {
+  padding-top: 4rem;
+}
+
+.update-link{
+  margin-left: 3rem;
+}
