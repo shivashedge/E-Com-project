@@ -115,12 +115,16 @@ li {
   color: green;
 }
 .carousel-caption {
+  width: 60%;
   background-color: #00000082;
   border-radius: 1rem;
+  margin: 0 auto;
 }
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   background-color: black;
-  padding: 1rem;
+  padding: 2rem;
+  border-radius: 70%;
 }
+

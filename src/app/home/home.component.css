@@ -9,7 +9,14 @@
   object-fit: contain;
 }
 .product-list-wrapper{
-  margin: 8rem 0;
+  margin: 5rem 0;
+  padding: 3rem ;
+  background: var(--bg);
+}
+.product-list-wrapper h3{
+  text-align: center;
+  color: var(--helper);
+  padding-bottom: 3rem ;
 }
 .product-item {
   border: 1px solid var(--helper);
@@ -33,4 +40,5 @@ h6.name-head {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 1rem 0;
 }

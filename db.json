@@ -24,31 +24,22 @@
   ],
   "products": [
     {
-      "productName": "Samsung S8Plus",
+      "productName": "Killer Jeans",
       "productPrice": "4000",
-      "productColor": "Black",
-      "productCategory": "Mobile",
-      "productDescription": "Samsung Product",
-      "productImgURL": "https://www.gizmochina.com/wp-content/uploads/2018/02/Samsung-Galaxy-S8-Plus-G955FD.jpg",
+      "productColor": "Blue",
+      "productCategory": "Jeans",
+      "productDescription": "Killer Jeans",
+      "productImgURL": "https://images.unsplash.com/photo-1565084888279-aca607ecce0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGtpbGxlciUyMGplYW5zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       "id": 1
     },
     {
-      "productName": "Iphone 11",
-      "productPrice": "55000",
-      "productColor": "green",
-      "productCategory": "Mobile",
-      "productDescription": "Apple Products",
-      "productImgURL": "https://images.unsplash.com/photo-1592910147752-5e0bc5f04715?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aXBob25lMTF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "productName": "NIke Shoes",
+      "productPrice": "5000",
+      "productColor": "Red-Black",
+      "productCategory": "Footware",
+      "productDescription": "NIke Shoes",
+      "productImgURL": "https://images.unsplash.com/photo-1552346154-21d32810aba3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG5pa2UlMjBzaG9lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
       "id": 2
-    },
-    {
-      "productName": "Microsoft Surface Laptop",
-      "productPrice": "45000",
-      "productColor": "black",
-      "productCategory": "Laptop",
-      "productDescription": "Microsoft Product",
-      "productImgURL": "https://m.media-amazon.com/images/I/718ETwvLVOL._SY450_.jpg",
-      "id": 4
     },
     {
       "productName": "Mac",
@@ -65,8 +56,35 @@
       "productColor": "Blue",
       "productCategory": "Clothing",
       "productDescription": "Levi's Clothing",
-      "productImgURL": "https://images.unsplash.com/photo-1514409101893-7db2a465592d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGxldmkncyUyMGplYW5zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "productImgURL": "https://images.unsplash.com/photo-1589274188558-972f0097cd4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGRlbmltfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
       "id": 7
+    },
+    {
+      "productName": "Samsung S8Plus",
+      "productPrice": "55000",
+      "productColor": "Black",
+      "productCategory": "Mobile",
+      "productDescription": "Samsung Product",
+      "productImgURL": "https://www.gizmochina.com/wp-content/uploads/2018/02/Samsung-Galaxy-S8-Plus-G955FD.jpg",
+      "id": 8
+    },
+    {
+      "productName": "Apple Desktop",
+      "productPrice": "50000",
+      "productColor": "White",
+      "productCategory": "Desktop",
+      "productDescription": "Apple Products",
+      "productImgURL": "https://images.unsplash.com/photo-1517059224940-d4af9eec41b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGxhcHRvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+      "id": 9
+    },
+    {
+      "productName": "iwatch series5",
+      "productPrice": "25000",
+      "productColor": "Black",
+      "productCategory": "Watch",
+      "productDescription": "Samsung Product",
+      "productImgURL": "https://images.unsplash.com/photo-1595590677969-becff900f5f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c21hcnR3YXRjaHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+      "id": 10
     }
   ]
 }
