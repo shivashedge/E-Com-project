@@ -1,14 +1,16 @@
 {
   "seller": [
     {
-      "name": "Shiva",
+      "fName": "Shiva",
+      "lName": "Shedge",
       "password": "test@123",
       "email": "test@123",
       "id": 1
     },
     
     {
-      "name": "Akash Navghane",
+      "fName": "Akash",
+      "lName" : "Navghane",
       "email": "akashnavghane9@gmail.com",
       "password": "Akash@123",
       "id": 2
