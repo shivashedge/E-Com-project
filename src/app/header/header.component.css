@@ -39,6 +39,8 @@ h1 a{
     height: 3.5rem;
     border-right: none;
     padding: 1rem 3rem;
+    font-size: large;
+    text-transform: uppercase;
 }
 
 /* .nav .nav-search button {
@@ -70,3 +72,17 @@ ul li a:hover ,
 ul li a:active{
     color: var(--helper);
 }
+
+ul.search-result {
+  position: absolute;
+  display: list-item;
+  z-index: 10;
+  background-color: #ffffffc4;
+  width: 30rem;
+  top: 7rem;
+}
+ul.search-result li{
+  border: 1px solid var(--helper);
+  padding: 0.5rem;
+}
+

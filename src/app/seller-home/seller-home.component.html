@@ -21,7 +21,7 @@
             alt="{{ product.productName }} Image"
           />
         </td>
-        <td>{{ product.productName }}</td>
+        <td>{{ product.productName | titlecase }}</td>
         <td>{{ product.productPrice }}</td>
         <td>{{ product.productColor }}</td>
         <td>{{ product.productCategory }}</td>

@@ -1,8 +1,7 @@
 table {
   text-align: center;
-  color: var(--helper);
   border-collapse: collapse;
-  margin: 0 auto;
+  margin: 2rem auto;
   font-size: large;
 }
 table td,
@@ -12,7 +11,7 @@ table th {
   min-width: 16rem;
 }
 img {
-  width: 10rem;
+  /* width: 10rem; */
   height: 10rem;
 }
 

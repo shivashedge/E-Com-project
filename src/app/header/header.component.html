@@ -1,8 +1,12 @@
 <nav class="nav">
     <h1><a routerLink="">asos</a><p>As Seen On Screen</p> </h1>
     <div *ngIf="menuType === 'default'" class="nav-search">
-        <input type="text" placeholder="Search Products">
+        <input type="text" placeholder="Search Product" (keyup)="searchProduct($event)" (blur)="hideSearch()">
         <button class="btn">Search</button>
+        <ul class="search-result" *ngIf="searchResult">
+          <li *ngFor="let item of searchResult">
+            <a href="">{{item.productName}}</a></li>
+        </ul>
     </div>
     <div [ngSwitch]="menuType">
         <ul *ngSwitchCase ="'default'">
