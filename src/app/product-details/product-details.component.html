@@ -1,0 +1,30 @@
+<div class="row product-details" *ngIf="productDetails">
+  <div class="col-sm-6">
+    <img
+      class="product-img"
+      src="{{ productDetails.productImgURL }}"
+      alt="{{ productDetails.productName }}"
+    />
+  </div>
+  <div class="col-sm-6">
+    <div class="details">
+      <h2>{{ productDetails.productName }}</h2>
+      <h4>Price: {{ productDetails.productPrice }}</h4>
+      <div>
+        Color:
+        <h4 [style.backgroundColor]="productDetails.productColor" class="product-color"></h4>
+      </div>
+      <h5>Category: {{ productDetails.productCategory }}</h5>
+      <h5>Product Details: {{ productDetails.productDescription }}</h5>
+
+      <button class="btn">Add to Card</button>
+      <button class="btn">Buy Now</button>
+      
+      <div class="quantity-group">
+        <button class="btn btn-sm">-</button>
+        <input type="text" value="1">
+        <button class="btn btn-sm">+</button>
+      </div>
+    </div>
+  </div>
+</div>

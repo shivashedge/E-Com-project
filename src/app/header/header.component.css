@@ -44,7 +44,9 @@ h1 a {
   font-size: large;
   text-transform: uppercase;
 }
-
+input::placeholder{
+  color: var(--helper);
+}
 /* .nav .nav-search button {
     color: var(--helper);
     border: 1px solid var(--helper);
@@ -79,11 +81,16 @@ ul.search-result {
   position: absolute;
   display: list-item;
   z-index: 10;
-  background-color: #ffffffc4;
+  background-color: var(--bg);
   width: 30rem;
   top: 7rem;
 }
+
 ul.search-result li {
   border: 1px solid var(--helper);
   padding: 0.5rem;
+}
+
+.asos{
+  color: var(--helper);
 }

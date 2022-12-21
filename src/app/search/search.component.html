@@ -10,19 +10,22 @@
   <ng-template #elseBlock>
     <div class="row search-item" *ngFor="let product of searchResult">
       <div class="col-sm-3">
-        <img src="{{ product.productImgURL }}" alt="" />
+        <a routerLink="/details/{{ product.id }}">
+          <img src="{{ product.productImgURL }}" alt=""
+        /></a>
       </div>
       <div class="col-sm-8">
-        <h3>{{ product.productName }}</h3>
+        <a routerLink="/details/{{ product.id }}">
+          <h3>{{ product.productName }}</h3></a
+        >
         <p>
-          <strong>Price:{{ product.productPrice }}</strong>
+          <strong>Price: {{ product.productPrice | currency:'INR' }}</strong>
         </p>
-        <p></p>
         <p>
           <span class="me-5">Color:{{ product.productColor }}</span
-          ><span>Category:{{ product.productCategory }}</span>
+          ><span>Category: {{ product.productCategory }}</span>
         </p>
-        <p>{{ product.productDescription }}</p>
+        <p>Product Details: {{ product.productDescription }}</p>
       </div>
     </div>
   </ng-template>

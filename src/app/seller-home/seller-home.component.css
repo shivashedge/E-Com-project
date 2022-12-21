@@ -4,18 +4,20 @@ table {
   margin: 2rem auto;
   font-size: large;
 }
+
 table td,
 table th {
-  border: 1px solid var(--helper);
+  border: 1px solid var(--heading);
   padding: 1rem;
   min-width: 16rem;
 }
+
 img {
   /* width: 10rem; */
   height: 10rem;
 }
 
-.product-list{
+.product-list {
   text-align: center;
   color: var(--helper);
 }
@@ -24,6 +26,6 @@ h3 {
   padding-top: 4rem;
 }
 
-.update-link{
+.update-link {
   margin-left: 3rem;
 }
