@@ -1,1 +1,29 @@
-<p>search works!</p>
+<div class="search-wrapper">
+  <div
+    class="row search-item"
+    *ngIf="this.searchResult.length === 0; else elseBlock"
+  >
+    <h3 class="empty">
+      Sorry !!! There is No Product Matching Your Search Result
+    </h3>
+  </div>
+  <ng-template #elseBlock>
+    <div class="row search-item" *ngFor="let product of searchResult">
+      <div class="col-sm-3">
+        <img src="{{ product.productImgURL }}" alt="" />
+      </div>
+      <div class="col-sm-8">
+        <h3>{{ product.productName }}</h3>
+        <p>
+          <strong>Price:{{ product.productPrice }}</strong>
+        </p>
+        <p></p>
+        <p>
+          <span class="me-5">Color:{{ product.productColor }}</span
+          ><span>Category:{{ product.productCategory }}</span>
+        </p>
+        <p>{{ product.productDescription }}</p>
+      </div>
+    </div>
+  </ng-template>
+</div>

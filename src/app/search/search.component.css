@@ -1,0 +1,23 @@
+.search-wrapper {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row.search-item {
+  width: 100%;
+  border-top: 1px solid var(--helper);
+  padding: 1rem;
+}
+.row.search-item img {
+  width: 100%;
+  object-fit: contain;
+  height: 15rem;
+}
+.search-item h3 {
+  color: var(--helper);
+}
+h3.empty {
+  text-align: center;
+}

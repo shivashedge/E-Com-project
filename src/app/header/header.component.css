@@ -1,46 +1,48 @@
-
 .nav {
-    background-color: var(--bg);
-    padding: 1rem 4.5rem;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center
+  background-color: var(--bg);
+  padding: 1rem 4.5rem;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
-.nav h1{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.nav h1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1 p{
-    align-self: flex-end;
+h1 p {
+  align-self: flex-end;
 }
 
-h1 a{
-    color: var(--heading);
+h1 a {
+  color: var(--heading);
 }
 
 .nav .nav-search {
-    flex: 1;
-    display: flex;
-    margin: 0 3%;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  margin: 0 3%;
+  align-items: center;
 }
 
 .nav .nav-search input {
-    flex: 1;
-    color: var(--helper);
-    border: 1px solid var(--helper);
-    height: 3.5rem;
-    border-right: none;
-    padding: 1rem 3rem;
-    font-size: large;
-    text-transform: uppercase;
+  flex: 1;
+  color: var(--helper);
+  border: 1px solid var(--helper);
+  height: 3.5rem;
+  border-right: none;
+  padding: 1rem 3rem;
+  font-size: large;
+  text-transform: uppercase;
 }
 
 /* .nav .nav-search button {
@@ -51,26 +53,26 @@ h1 a{
 } */
 
 ul {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    font-size: 1.8rem;
-    font-weight: 500;
-    text-transform: uppercase;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 ul li {
-    padding-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 ul li a {
-    color: var(--black);
-    transition: color 0.3s linear;
+  color: var(--black);
+  transition: color 0.3s linear;
 }
 
-ul li a:hover ,
-ul li a:active{
-    color: var(--helper);
+ul li a:hover,
+ul li a:active {
+  color: var(--helper);
 }
 
 ul.search-result {
@@ -81,8 +83,7 @@ ul.search-result {
   width: 30rem;
   top: 7rem;
 }
-ul.search-result li{
+ul.search-result li {
   border: 1px solid var(--helper);
   padding: 0.5rem;
 }
-

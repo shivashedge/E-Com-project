@@ -41,14 +41,18 @@ export class HeaderComponent implements OnInit {
       // console.warn(element.value);
       this.product.searchProducts(element.value).subscribe((result) => {
         // console.warn(result);
-        if(result.length>5){
-          result.length=5
+        if (result.length > 5) {
+          result.length = 5;
         }
         this.searchResult = result;
       });
     }
   }
-  hideSearch(){
-    this.searchResult= undefined;
+  hideSearch() {
+    this.searchResult = undefined;
+  }
+  submitSearch(val: string) {
+    // console.warn(val);
+    this.route.navigate([`search/${val}`]);
   }
 }

@@ -1,22 +1,22 @@
-.product-header-img{
+
+.product-header-img {
   object-fit: contain;
   height: 60rem;
   width: 100%;
 }
 .product-item img {
   width: 100%;
-  height: 30rem;
+  height: 25rem;
   object-fit: contain;
 }
-.product-list-wrapper{
-  margin: 5rem 0;
-  padding: 3rem ;
+.product-list-wrapper {
+  padding: 2rem;
   background: var(--bg);
 }
-.product-list-wrapper h3{
+.home-wrapper h3 {
   text-align: center;
   color: var(--helper);
-  padding-bottom: 3rem ;
+  padding: 4rem 0;
 }
 .product-item {
   border: 1px solid var(--helper);
@@ -25,15 +25,17 @@
 }
 .product-item .product-details {
   border-top: 1px solid var(--helper);
-  padding: 1.5rem;
+  padding: 0.5rem;
   border-bottom: 1px solid var(--helper);
 }
 h6.name-head {
+  Color: var(--helper);
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
 }
-.product-item .product-details h6{
+.product-price,
+.product-details {
   text-align: center;
 }
 .product-footer {
