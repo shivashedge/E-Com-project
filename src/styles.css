@@ -24,9 +24,11 @@ html {
   --bg: rgb(249 249 255);
   /* --bg: #c8d6e5; */
   --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
-  --gradientSupport: -webkit-linear-gradient(0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%);
+  --gradientSupport: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
   --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
   --shadowsupport: 0 2rem 2rem 0 rgb(132 144 255 / 30%);
 }
@@ -70,6 +72,7 @@ li {
 
 .btn {
   background: var(--heading);
+  border: 2px solid var(--helper);
   color: var(--helper);
   padding: 1rem 3rem;
   /* display: inline-block; */
@@ -79,13 +82,13 @@ li {
   transition: all 0.5s ease;
   /*if transition of css3 not suportted webkit is for chrome opera safari browsers*/
   -webkit-transition: all 0.5s ease;
-  border: none;
 }
 
 .btn:hover,
 .btn:active {
   background: var(--gradientSupport);
   color: var(--heading);
+  border: 2px solid var(--heading);
   box-shadow: var(--shadowsupport);
 }
 
@@ -99,8 +102,8 @@ li {
   justify-content: center;
 }
 
-.form-input,.form-textarea
- {
+.form-input,
+.form-textarea {
   height: 3.5rem;
   padding-left: 1.5rem;
   color: var(--helper);
@@ -108,7 +111,7 @@ li {
   margin-bottom: 3rem;
 }
 
-::placeholder{
+::placeholder {
   color: var(--helper);
 }
 
@@ -121,7 +124,7 @@ li {
 }
 
 .carousel-caption {
-  width: 60%;
+  width: 50%;
   background-color: #00000082;
   border-radius: 1rem;
   margin: 0 auto;
@@ -129,7 +132,7 @@ li {
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
-  background-color: black;
+  background-color: var(--para);
   padding: 2rem;
   border-radius: 70%;
 }

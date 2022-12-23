@@ -3,11 +3,12 @@
     <ng-template *ngFor="let product of popularProducts" ngbSlide>
       <h3>Popular Products</h3>
       <div class="picsum-img-wrapper">
-        <img
-          class="product-header-img"
-          src="{{ product.productImgURL }}"
-          alt="{{ product.productName }}"
-        />
+        <a routerLink="/details/{{ product.id }}"
+          ><img
+            class="product-header-img"
+            src="{{ product.productImgURL }}"
+            alt="{{ product.productName }}"
+        /></a>
       </div>
       <div class="carousel-caption">
         <h3>{{ product.productName }}</h3>
@@ -20,13 +21,16 @@
     <div class="row">
       <div class="col-sm-4" *ngFor="let product of trendyProducts">
         <div class="product-item">
-          <img
-            src="{{ product.productImgURL }}"
-            alt="{{ product.productName }}"
-          />
+          <a routerLink="/details/{{ product.id }}"
+            ><img
+              src="{{ product.productImgURL }}"
+              alt="{{ product.productName }}"
+          /></a>
 
           <div class="product-details">
-            <h6 class="name-head">{{ product.productName }}</h6>
+            <a routerLink="/details/{{ product.id }}"
+              ><h6 class="name-head">{{ product.productName }}</h6></a
+            >
             <div class="product-price">
               <h6>Price : {{ product.productPrice }}</h6>
             </div>
@@ -35,7 +39,7 @@
             </div>
           </div>
           <div class="product-footer">
-            <a href="">View Details</a>
+            <a routerLink="/details/{{ product.id }}">View Details</a>
             <a href="">Add To Cart</a>
           </div>
         </div>

@@ -9,7 +9,8 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent implements OnInit {
-  productDetails: undefined| product;
+  productDetails: undefined | product;
+  productQuantity: number = 1;
   constructor(
     private activeRoute: ActivatedRoute,
     private product: ProductService
@@ -17,8 +18,16 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     let productId = this.activeRoute.snapshot.paramMap.get('productId');
-    productId && this.product.getProduct(productId).subscribe((result) => {
+    productId &&
+      this.product.getProduct(productId).subscribe((result) => {
         this.productDetails = result;
       });
+  }
+  handleQuantity(val: string) {
+    if (this.productQuantity < 20 && val === 'plus') {
+      this.productQuantity += 1;
+    } else if (this.productQuantity > 1 && val === 'min') {
+      this.productQuantity -= 1;
+    }
   }
 }

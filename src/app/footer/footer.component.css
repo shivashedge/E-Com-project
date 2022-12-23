@@ -1,5 +1,10 @@
 .footer{
   background-color: var(--bg);
+  /* position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0; */
+  margin-bottom: 0;
 }
 .d-flex {
   justify-content: space-evenly;
@@ -11,4 +16,14 @@
 .copy{
   text-align: center;
   padding: 2rem;
+  color: var(--helper);
+}
+ul li a {
+  color: var(--black);
+  transition: color 0.3s linear;
+}
+
+ul li a:hover,
+ul li a:active {
+  color: var(--helper);
 }

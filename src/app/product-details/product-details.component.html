@@ -12,18 +12,21 @@
       <h4>Price: {{ productDetails.productPrice }}</h4>
       <div>
         Color:
-        <h4 [style.backgroundColor]="productDetails.productColor" class="product-color"></h4>
+        <h4
+          [style.backgroundColor]="productDetails.productColor"
+          class="product-color"
+        ></h4>
       </div>
       <h5>Category: {{ productDetails.productCategory }}</h5>
       <h5>Product Details: {{ productDetails.productDescription }}</h5>
 
       <button class="btn">Add to Card</button>
       <button class="btn">Buy Now</button>
-      
+
       <div class="quantity-group">
-        <button class="btn btn-sm">-</button>
-        <input type="text" value="1">
-        <button class="btn btn-sm">+</button>
+        <button class="btn btn-sm" (click)="handleQuantity('min')">-</button>
+        <input type="text" value="{{ productQuantity }}" />
+        <button class="btn btn-sm" (click)="handleQuantity('plus')">+</button>
       </div>
     </div>
   </div>

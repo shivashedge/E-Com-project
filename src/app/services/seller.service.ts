@@ -11,7 +11,7 @@ export class SellerService {
   isSellerLoggedIn = new BehaviorSubject<boolean>(false);
   isLoginError = new EventEmitter<boolean>(false);
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) {}
 
   userSignUp(data: SignUp) {
     return this.http
@@ -36,23 +36,22 @@ export class SellerService {
 
   userLogin(data: login) {
     this.http
-      .get(
+      .get<login[]>(
         `http://localhost:3000/seller?email=${data.email}&password=${data.password}`,
         { observe: 'response' }
       )
-      .subscribe((result: any) => {
+      .subscribe((result) => {
         // console.warn(result);
         if (result && result.body && result.body.length) {
           // alert('login succsess')
-          
-        localStorage.setItem('seller', JSON.stringify(result.body));
 
-        this.router.navigate(['seller-home']);
+          localStorage.setItem('seller', JSON.stringify(result.body));
+
+          this.router.navigate(['seller-home']);
         } else {
           // alert('login failed')
           this.isLoginError.emit(true);
         }
-
       });
   }
 }

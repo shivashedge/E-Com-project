@@ -11,7 +11,9 @@
     <div class="row search-item" *ngFor="let product of searchResult">
       <div class="col-sm-3">
         <a routerLink="/details/{{ product.id }}">
-          <img src="{{ product.productImgURL }}" alt=""
+          <img
+            src="{{ product.productImgURL }}"
+            alt="{{ product.productName }}"
         /></a>
       </div>
       <div class="col-sm-8">
@@ -19,7 +21,7 @@
           <h3>{{ product.productName }}</h3></a
         >
         <p>
-          <strong>Price: {{ product.productPrice | currency:'INR' }}</strong>
+          <strong>Price: {{ product.productPrice | currency : "INR" }}</strong>
         </p>
         <p>
           <span class="me-5">Color:{{ product.productColor }}</span

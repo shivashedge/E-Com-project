@@ -19,11 +19,11 @@
   align-items: center;
 }
 
-h1 p {
+.nav h1 p {
   align-self: flex-end;
 }
 
-h1 a {
+.nav h1 a {
   color: var(--heading);
 }
 
@@ -76,6 +76,9 @@ ul li a:hover,
 ul li a:active {
   color: var(--helper);
 }
+ul li a.active{
+  color: var(--helper);
+}
 
 ul.search-result {
   position: absolute;
@@ -84,6 +87,7 @@ ul.search-result {
   background-color: var(--bg);
   width: 30rem;
   top: 7rem;
+  cursor: pointer;
 }
 
 ul.search-result li {

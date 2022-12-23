@@ -10,20 +10,26 @@ import { ProductService } from '../services/product.service';
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName: string = '';
+  userName: string = '';
   searchResult: undefined | product[];
+
   constructor(private route: Router, private product: ProductService) {}
 
   ngOnInit(): void {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          this.menuType = 'seller';
           if (localStorage.getItem('seller')) {
             let sellerStore: any = localStorage.getItem('seller');
-
-            let sellerData = JSON.parse(sellerStore)[0];
+            let sellerData = sellerStore && JSON.parse(sellerStore)[0];
             this.sellerName = 'Hello ' + sellerData.fName;
+            this.menuType = 'seller';
           }
+        } else if (localStorage.getItem('user')) {
+          let userStore: any = localStorage.getItem('user');
+          let userData = userStore && JSON.parse(userStore)[0];
+          this.userName = 'Hello ' + userData.fName;
+          this.menuType = 'user';
         } else {
           this.menuType = 'default';
         }
@@ -34,6 +40,10 @@ export class HeaderComponent implements OnInit {
   logOut() {
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
+  }
+  userLogOut() {
+    localStorage.removeItem('user');
+    this.route.navigate(['/user-auth']);
   }
   searchProduct(querry: KeyboardEvent) {
     if (querry) {
@@ -50,6 +60,9 @@ export class HeaderComponent implements OnInit {
   }
   hideSearch() {
     this.searchResult = undefined;
+  }
+  redirecToDetails(id: number) {
+    this.route.navigate([`details/${id}`]);
   }
   submitSearch(val: string) {
     // console.warn(val);

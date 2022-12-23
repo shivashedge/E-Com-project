@@ -1,0 +1,57 @@
+.sign-up,
+.login {
+  text-align: center;
+  color: var(--helper);
+}
+
+.user-auth h3 {
+  padding-top: 4rem;
+}
+
+.auth-toggle-link {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: var(--helper);
+  text-align: center;
+  cursor: pointer;
+}
+
+.home-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradientSupport);
+  border-radius: 100rem 0 100rem 0rem;
+  border: 4px solid var(--heading);
+}
+
+.home-logo:hover {
+  background: var(--heading);
+  border: 4px solid var(--helper);
+}
+
+.home-logo h1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.asos {
+  color: var(--bg);
+  padding-left: 10rem;
+}
+
+.home-logo h1 a {
+  color: var(--bg);
+  padding: 1rem;
+  font-size: 25rem;
+}
+
+.home-logo h1 a:hover {
+  color: var(--helper);
+}
+.row
+{
+  height: 70vh;
+}

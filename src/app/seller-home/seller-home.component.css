@@ -7,11 +7,13 @@ table {
 
 table td,
 table th {
-  border: 1px solid var(--heading);
   padding: 1rem;
   min-width: 16rem;
+  border: 1px solid var(--heading);
 }
-
+thead, .action, .update-link{
+  color: var(--helper);
+}
 img {
   /* width: 10rem; */
   height: 10rem;
@@ -19,7 +21,6 @@ img {
 
 .product-list {
   text-align: center;
-  color: var(--helper);
 }
 
 h3 {

@@ -3,7 +3,7 @@
     <a routerLink="">asos</a>
     <p class="asos">As Seen On Screen</p>
   </h1>
-  <div *ngIf="menuType === 'default'" class="nav-search">
+  <div *ngIf="menuType === 'user'" class="nav-search">
     <input
     #searchInput
       type="text"
@@ -13,25 +13,32 @@
     />
     <button class="btn" (click)="submitSearch(searchInput.value)">Search</button>
     <ul class="search-result" *ngIf="searchResult">
-      <li *ngFor="let item of searchResult">
-        <a href="">{{ item.productName }}</a>
+      <li *ngFor="let product of searchResult">
+        <a (mousedown)="redirecToDetails(product.id)">{{ product.productName }}</a>
       </li>
     </ul>
   </div>
   <div [ngSwitch]="menuType">
     <ul *ngSwitchCase="'default'">
-      <li><a routerLink="seller-auth">Seller</a></li>
-      <li><a routerLink="">Home</a></li>
-      <li><a href="#">Login</a></li>
-      <li><a href="">Cart(0)</a></li>
+      <li><a  routerLink="seller-auth">Seller</a></li>
+      <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
+      <li><a routerLinkActive="active" routerLink="/user-auth">Login/Sign-up</a></li>
+      <li><a routerLinkActive="active" routerLink="">Cart(0)</a></li>
+    </ul>
+    <ul *ngSwitchCase="'user'">
+      <li><a  routerLink="seller-auth">Seller</a></li>
+      <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
+      <li><a routerLinkActive="active" routerLink="">Cart(0)</a></li>
+      <li><a routerLinkActive="active" (click)="userLogOut()">Logout</a></li>
+      <li><a class="active" routerLink="/user-auth">{{userName| titlecase}}</a></li>
     </ul>
     <ul *ngSwitchCase="'seller'">
+      <li>
+        <a class="active">{{ sellerName | titlecase }}</a>
+      </li>
       <li><a routerLink="seller-add-product">Add-product</a></li>
       <li><a routerLink="seller-home">Product-List</a></li>
       <li><a (click)="logOut()">LogOut</a></li>
-      <li>
-        <a>{{ sellerName | titlecase }}</a>
-      </li>
     </ul>
   </div>
 </nav>
