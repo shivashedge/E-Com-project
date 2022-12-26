@@ -17,10 +17,11 @@ export class SellerService {
     return this.http
       .post('http://localhost:3000/seller', data, { observe: 'response' })
       .subscribe((result) => {
+        // console.warn('signupresult',result);
         this.isSellerLoggedIn.next(true);
 
         localStorage.setItem('seller', JSON.stringify(result.body));
-
+        // console.warn('signuplocalS',result.body);
         this.router.navigate(['seller-home']);
 
         // console.warn('result', result);
@@ -33,7 +34,6 @@ export class SellerService {
       this.router.navigate(['seller-home']);
     }
   }
-
   userLogin(data: login) {
     this.http
       .get<login[]>(
@@ -41,12 +41,12 @@ export class SellerService {
         { observe: 'response' }
       )
       .subscribe((result) => {
-        // console.warn(result);
+        console.warn('loginresult',result);
         if (result && result.body && result.body.length) {
           // alert('login succsess')
 
           localStorage.setItem('seller', JSON.stringify(result.body));
-
+          // console.warn('loginlocalS',result.body);
           this.router.navigate(['seller-home']);
         } else {
           // alert('login failed')

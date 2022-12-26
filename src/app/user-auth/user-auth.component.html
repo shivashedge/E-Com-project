@@ -23,6 +23,7 @@
           placeholder="First Name"
           name="fName"
           ngModel
+
         />
         <input
           class="form-input"
@@ -56,28 +57,36 @@
     <!-- Log-In-Form -->
     <div *ngIf="!showLogin" class="login">
       <h3>User Login</h3>
-      <p class="error-p">{{ authError }}</p>
+
       <form
         class="common-form"
         #userLogin="ngForm"
         (ngSubmit)="userlogin(userLogin.value)"
       >
+      <p class="error-p">{{ authError }}</p>
+      <p><span class="error-p" *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>
         <input
           class="form-input"
           type="email"
           placeholder="Enter Email"
           name="email"
           ngModel
+          #email="ngModel"
+          required
+          email
         />
+        <p><span class="error-p" *ngIf="password.invalid && password.touched">Please Enter Valid value</span></p>
         <input
           class="form-input"
           type="password"
           placeholder="Enter Password"
           name="password"
           ngModel
+          #password="ngModel"
+          required
         />
 
-        <button class="form-button btn">Login</button>
+        <button class="form-button btn" [disabled]="userLogin.invalid">Login</button>
 
         <a class="auth-toggle-link" (click)="openSignUp()"
           >Don't Have Account..? Click here To Sign-Up

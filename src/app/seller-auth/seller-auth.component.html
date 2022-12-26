@@ -46,12 +46,12 @@
   <!-- Log-In-Form -->
   <div *ngIf="!showLogin" class="login">
     <h3>Seller Login</h3>
-    <p class="error-p">{{ authError }}</p>
     <form
-      class="common-form"
-      #sellerLogIn="ngForm"
-      (ngSubmit)="login(sellerLogIn.value)"
+    class="common-form"
+    #sellerLogIn="ngForm"
+    (ngSubmit)="login(sellerLogIn.value)"
     >
+    <p class="error-p">{{ authError }}</p>
       <input
         class="form-input"
         type="email"

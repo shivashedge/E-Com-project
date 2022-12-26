@@ -8,18 +8,11 @@
       "id": 1
     },
     {
-      "fName": "Akash",
-      "lName": "Navghane",
-      "email": "akashnavghane9@gmail.com",
-      "password": "Akash@123",
+      "fName": "user",
+      "lName": "name",
+      "email": "user@123",
+      "password": "user@123",
       "id": 2
-    },
-    {
-      "fName": "User",
-      "lName": "Name",
-      "email": "User@test.com",
-      "password": "12345",
-      "id": 3
     }
   ],
   "products": [
@@ -92,7 +85,7 @@
       "fName": "Shiva",
       "lName": "Shedge",
       "email": "test@123",
-      "password": "123",
+      "password": "test@123",
       "id": 1
     }
   ]

@@ -20,8 +20,9 @@
       <h5>Category: {{ productDetails.productCategory }}</h5>
       <h5>Product Details: {{ productDetails.productDescription }}</h5>
 
-      <button class="btn">Add to Card</button>
       <button class="btn">Buy Now</button>
+      <button *ngIf="!removeCart" class="btn" (click)="addToCart()">Add to Cart</button>
+      <button *ngIf="removeCart" class="btn" (click)="removeFromCart(productDetails.id)">Remove from Cart</button>
 
       <div class="quantity-group">
         <button class="btn btn-sm" (click)="handleQuantity('min')">-</button>

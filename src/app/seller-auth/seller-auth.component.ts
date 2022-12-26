@@ -16,12 +16,10 @@ export class SellerAuthComponent implements OnInit {
   ngOnInit(): void {
     this.seller.reloadSeller();
   }
-
   signUp(data: SignUp): void {
     // console.log(data);
     this.seller.userSignUp(data);
   }
-
   login(data: login): void {
     this.authError = '';
     this.seller.userLogin(data);
@@ -31,11 +29,9 @@ export class SellerAuthComponent implements OnInit {
       }
     });
   }
-
   openLogin() {
     this.showLogin = false;
   }
-
   openSignUp() {
     this.showLogin = true;
   }

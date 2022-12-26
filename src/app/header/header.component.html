@@ -3,7 +3,7 @@
     <a routerLink="">asos</a>
     <p class="asos">As Seen On Screen</p>
   </h1>
-  <div *ngIf="menuType === 'user'" class="nav-search">
+  <div *ngIf="menuType === 'user''default'" class="nav-search">
     <input
     #searchInput
       type="text"
@@ -23,14 +23,14 @@
       <li><a  routerLink="seller-auth">Seller</a></li>
       <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
       <li><a routerLinkActive="active" routerLink="/user-auth">Login/Sign-up</a></li>
-      <li><a routerLinkActive="active" routerLink="">Cart(0)</a></li>
+      <li><a routerLinkActive="active" routerLink="">Cart({{cartItems}})</a></li>
     </ul>
     <ul *ngSwitchCase="'user'">
       <li><a  routerLink="seller-auth">Seller</a></li>
       <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
-      <li><a routerLinkActive="active" routerLink="">Cart(0)</a></li>
+      <li><a routerLinkActive="active" routerLink="">Cart({{cartItems}})</a></li>
       <li><a routerLinkActive="active" (click)="userLogOut()">Logout</a></li>
-      <li><a class="active" routerLink="/user-auth">{{userName| titlecase}}</a></li>
+      <li><a class="active">{{userName| titlecase}}</a></li>
     </ul>
     <ul *ngSwitchCase="'seller'">
       <li>

@@ -35,6 +35,7 @@ export class UserService {
         if (result && result.body && result.body.length) {
           localStorage.setItem('user', JSON.stringify(result.body));
           this.router.navigate(['/']);
+          this.isLoginError.emit(false);
         }else {
           // alert('login failed')
           this.isLoginError.emit(true);

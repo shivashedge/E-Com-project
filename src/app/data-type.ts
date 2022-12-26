@@ -3,6 +3,7 @@ export interface SignUp {
   lName:string
   password: string;
   email: string;
+  id:number
 }
 
 export interface login {
@@ -17,5 +18,6 @@ export interface product{
   productColor:string;
   productDescription:string;
   productImgURL:string;
-  id:number
+  id:number;
+  quantity:undefined|number;
 }
