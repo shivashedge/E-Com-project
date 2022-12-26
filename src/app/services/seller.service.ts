@@ -41,7 +41,7 @@ export class SellerService {
         { observe: 'response' }
       )
       .subscribe((result) => {
-        console.warn('loginresult',result);
+        console.warn('loginresult', result);
         if (result && result.body && result.body.length) {
           // alert('login succsess')
 
