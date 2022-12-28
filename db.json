@@ -88,5 +88,19 @@
       "password": "test@123",
       "id": 1
     }
+  ],
+  "cart": [
+    {
+      "productName": "NIke Shoes",
+      "productPrice": "5000",
+      "productColor": "Red",
+      "productCategory": "Footware",
+      "productDescription": "NIke Shoes",
+      "productImgURL": "https://images.unsplash.com/photo-1552346154-21d32810aba3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG5pa2UlMjBzaG9lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 2,
+      "id": 1
+    }
   ]
 }

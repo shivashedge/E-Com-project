@@ -20,4 +20,18 @@ export interface product{
   productImgURL:string;
   id:number;
   quantity:undefined|number;
+  productId:undefined|number;
+}
+
+export interface cart{
+  productName:string;
+  productPrice:number;
+  productCategory:string;
+  productColor:string;
+  productDescription:string;
+  productImgURL:string;
+  id:number|undefined;
+  quantity:undefined|number;
+  userId:number;
+  productId:number;
 }

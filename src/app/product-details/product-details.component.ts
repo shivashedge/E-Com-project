@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { product } from '../data-type';
+import { cart, product } from '../data-type';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -33,9 +33,21 @@ export class ProductDetailsComponent implements OnInit {
         this.removeCart = false;
       }
     }
+    let user = localStorage.getItem('user');
+    if (user) {
+      let userId = user && JSON.parse(user)[0].id;
+      this.product.getCartList(userId);
+      this.product.cartData.subscribe((result) => {
+        // console.warn('result', result);
+        let item = result.filter((item: any) =>item.productId == productId);
+        if (item.length) {
+          this.removeCart = true;
+        }
+      });
+    }
   }
   handleQuantity(val: string) {
-    if (this.productQuantity < 20 && val === 'plus') {
+    if (this.productQuantity < 10 && val === 'plus') {
       this.productQuantity += 1;
     } else if (this.productQuantity > 1 && val === 'min') {
       this.productQuantity -= 1;
@@ -49,23 +61,24 @@ export class ProductDetailsComponent implements OnInit {
         this.product.localAddToCart(this.productDetails);
         this.removeCart = true;
       } else {
-        console.warn('User loged in');
         let user = localStorage.getItem('user');
-        let userId = user && JSON.parse(user).id;
-        // console.warn('id',...userId);
-console.warn(userId);
-
-        let cartData = {
+        let userId = user && JSON.parse(user)[0].id;
+        let cartData: cart = {
           ...this.productDetails,
-          userId
-        }
-        console.warn(cartData);
-
+          userId,
+          productId: this.productDetails.id,
+        };
+        delete cartData.id;
+        // console.warn('cartData', cartData);
+        this.product.addToCart(cartData).subscribe((result) => {
+          this.product.getCartList(userId);
+          this.removeCart = true;
+        });
       }
     }
   }
   removeFromCart(id: number) {
     this.product.removeItemFromCart(id);
-    this.removeCart = false;
+    this.removeCart = true;
   }
 }
