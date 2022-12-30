@@ -9,7 +9,6 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Quantity</th>
-                        <th>Total</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -20,8 +19,7 @@
                         </td>
                         <td>{{ product.productName | titlecase }}</td>
                         <td>{{ product.productPrice }}</td>
-                        <td>{{ product.productColor }}</td>
-                        <td>{{ product.productDescription }}</td>
+                        <td>{{ product.quantity }}</td>
                         <td class="action">
                             <fa-icon (click)="(product.id)" [icon]="delete"></fa-icon>
                         </td>
@@ -29,28 +27,28 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-sm-4 cartsummary">
+        <div class="col-sm-4 cartsummary d-flex flex-column justify-content-center align-item-center">
             <h3 class="text-center heading">Cart Summary</h3>
             <table class="w-100">
                 <tr>
-                    <td>Total Amount</td>
-                    <td>300</td>
+                    <td>Cart Amount</td>
+                    <td>{{priceSummary.cartAmount}}</td>
                 </tr>
                 <tr>
                     <td>Discount</td>
-                    <td>300</td>
+                    <td>{{priceSummary.discount}}</td>
                 </tr>
                 <tr>
                     <td>Delivery</td>
-                    <td>300</td>
+                    <td>{{priceSummary.delivary}}</td>
                 </tr>
                 <tr>
                     <td>Tax</td>
-                    <td>300</td>
+                    <td>{{priceSummary.tax}}</td>
                 </tr>
                 <tr>
-                    <th>Total Cart Amount</th>
-                    <th>3000</th>
+                    <th>Total Amount to Pay</th>
+                    <th>{{priceSummary.total}}</th>
                 </tr>
             </table>
         </div>

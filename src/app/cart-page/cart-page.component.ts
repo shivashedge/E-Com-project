@@ -1,5 +1,8 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { cart, priceSummary } from '../data-type';
+import { ProductService } from '../services/product.service';
 @Component({
   selector: 'app-cart-page',
   templateUrl: './cart-page.component.html',
@@ -7,21 +10,32 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 })
 export class CartPageComponent implements OnInit {
   delete = faTrash;
-  cartList=[
-    {"productName": "Killer Jeans",
-    "productPrice": "4000",
-    "productColor": "Blue",
-    "productCategory": "Clothing",
-    "productDescription": "Killer Jeans",
-    "productImgURL": "https://images.unsplash.com/photo-1565084888279-aca607ecce0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGtpbGxlciUyMGplYW5zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-    "quantity": 1,
-    "userId": 1,
-    "productId": 1,
-    "id": 1}
-  ]
-  constructor() { }
+  cartList:cart[]|undefined
+  priceSummary:priceSummary={
+    cartAmount:0,
+    discount:0,
+    tax:0,
+    delivary:0,
+    total:0
+  }
+  constructor(private product:ProductService) { }
 
   ngOnInit(): void {
+    this.product.currentCart().subscribe((result)=>{
+      this.cartList = result;
+      let price = 0;
+      result.forEach((item)=>{
+        if(item.quantity){
+          price = price + (+item.productPrice * item.quantity)
+        }
+      })
+      this.priceSummary.cartAmount=price;
+      this.priceSummary.discount=(price/10);
+      this.priceSummary.tax=(price/5);
+      this.priceSummary.delivary= price?100:0
+      this.priceSummary.total= (this.priceSummary.cartAmount+this.priceSummary.tax+this.priceSummary.delivary)-this.priceSummary.discount
+      
+    })
   }
 
 }
