@@ -1,5 +1,6 @@
 import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { cart, priceSummary } from '../data-type';
 import { ProductService } from '../services/product.service';
@@ -18,7 +19,7 @@ export class CartPageComponent implements OnInit {
     delivary:0,
     total:0
   }
-  constructor(private product:ProductService) { }
+  constructor(private product:ProductService,private router:Router) { }
 
   ngOnInit(): void {
     this.product.currentCart().subscribe((result)=>{
@@ -36,6 +37,9 @@ export class CartPageComponent implements OnInit {
       this.priceSummary.total= (this.priceSummary.cartAmount+this.priceSummary.tax+this.priceSummary.delivary)-this.priceSummary.discount
       
     })
+  }
+  checkout(){
+    this.router.navigate(['/checkout'])
   }
 
 }

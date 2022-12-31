@@ -1,12 +1,11 @@
 table {
-    text-align: center;
     border-collapse: collapse;
     margin: 1rem auto;
     font-size: large;
   }
   
-  table td,
-  table th {
+  .cartdetails table td,
+  .cartdetails table th {
     padding: 1rem;
     min-width: 10rem;
     border: 1px solid var(--heading);
@@ -22,10 +21,7 @@ table {
   .product-list {
     text-align: center;
   }
-  
   h3 {
     padding-top: 4rem;
     color: var(--helper);
   }
-  
-  

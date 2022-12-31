@@ -48,9 +48,10 @@
                 </tr>
                 <tr>
                     <th>Total Amount to Pay</th>
-                    <th>{{priceSummary.total}}</th>
+                    <th>{{priceSummary.total|currency:'INR'}}</th>
                 </tr>
             </table>
+            <button class="btn my-2" (click)="checkout()">Checkout</button>
         </div>
     </div>
 </div>
