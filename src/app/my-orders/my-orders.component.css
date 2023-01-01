@@ -1,0 +1,12 @@
+h3 {
+    padding-top: 4rem;
+    color: var(--helper);
+}
+.my-orders img{
+    width: 10rem;
+}
+.orderData{
+    border-bottom: 1px solid var(--helper);
+    padding-bottom: 1rem;
+    margin: 1rem 0;
+}

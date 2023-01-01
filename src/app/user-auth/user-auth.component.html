@@ -23,7 +23,7 @@
           placeholder="First Name"
           name="fName"
           ngModel
-
+          required
         />
         <input
           class="form-input"
@@ -32,22 +32,30 @@
           name="lName"
           ngModel
         />
+        <p><span class="error-p" *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>
         <input
           class="form-input"
           type="email"
           placeholder="Enter Email"
           name="email"
           ngModel
+          required
+          email
+          #email="ngModel"
         />
+        <p><span class="error-p" *ngIf="password.invalid && password.touched">Please Enter Valid Email</span></p>
         <input
           class="form-input"
           type="password"
           placeholder="Enter Password"
           name="password"
           ngModel
+          required
+          #password="ngModel"
+          minlength="6"
         />
 
-        <button class="form-button btn">Sign Up</button>
+        <button class="form-button btn" [disabled]="userSignUp.invalid">Sign Up</button>
 
         <a class="auth-toggle-link" (click)="openLogin()"
           >Already Have Account..? Click here To Login
@@ -86,7 +94,7 @@
           required
         />
 
-        <button class="form-button btn" [disabled]="userLogin.invalid">Login</button>
+        <button class="form-button btn">Login</button>
 
         <a class="auth-toggle-link" (click)="openSignUp()"
           >Don't Have Account..? Click here To Sign-Up
