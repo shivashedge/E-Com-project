@@ -21,7 +21,7 @@
                         <td>{{ product.productPrice }}</td>
                         <td>{{ product.quantity }}</td>
                         <td class="action">
-                            <fa-icon (click)="(product.id)" [icon]="delete"></fa-icon>
+                            <fa-icon (click)="removeCart(product.id)" [icon]="delete"></fa-icon>
                         </td>
                     </tr>
                 </tbody>
